@@ -34,8 +34,9 @@ export default async function handler(req, res) {
 				gender,
 				fitnessLevel,
 				goal,
+				equipment,
 			} = req.body
-			const prompt = generatePrompt({height, weight, age, gender, fitnessLevel, goal})
+			const prompt = generatePrompt({height, weight, age, gender, fitnessLevel, goal,equipment})
 
 			result = await generateText(prompt)
 			return res.json({result})
