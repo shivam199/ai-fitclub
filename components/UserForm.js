@@ -13,7 +13,6 @@ export default function UserForm({setData, setLoading, loading}) {
 		setLoading(true)
 
 		// Retrieve the form field values
-		const model = event.target.elements.model.value;
 		const height = event.target.elements.height.value;
 		const weight = event.target.elements.weight.value;
 		const age = event.target.elements.age.value;
@@ -29,7 +28,6 @@ export default function UserForm({setData, setLoading, loading}) {
 			gender,
 			fitnessLevel,
 			goal,
-			model,
 		};
 
 		let response = await fetch(GENERATE_URL, {
@@ -55,15 +53,6 @@ export default function UserForm({setData, setLoading, loading}) {
 
 	return (
 		<form className="w-full my-10 mt-6 p-4 border border-gray-100 rounded-xl shadow-md" onSubmit={handleSubmit} autoComplete={"off"}>
-			<div className="flex flex-wrap -mx-3 mb-2">
-				<div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-					<CustomSelect
-						id={'model'}
-						label={'AI Source'}
-						values={AI_SOURCES}
-					/>
-				</div>
-			</div>
 			<hr className={"my-5"}/>
 			<div className="flex flex-wrap -mx-3 mb-3">
 				<div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">

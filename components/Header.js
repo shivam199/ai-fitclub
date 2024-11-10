@@ -4,7 +4,7 @@ export default function Header() {
 			<div className={"max-w-5xl mx-auto text-left"}>
 				<h1
 					className={"inline-block text-transparent bg-clip-text text-5xl font-bold bg-gradient-to-r from-[#d946ef] to-[#0ea5e9]"}>
-					AI Workout Wizard
+					AI FitClub
 				</h1>
 			</div>
 		</div>

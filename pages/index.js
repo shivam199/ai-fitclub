@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<main className="flex flex-col min-h-screen">
 			<Head>
-				<title>AI Workout Wizard</title>
+				<title>AI FitClub</title>
 			</Head>
 			<div className={'w-full flex-grow'}>
 				<Header/>

@@ -5,8 +5,7 @@ export default function Intro() {
 				Welcome to our fitness app!
 			</p>
 			<p className={"mt-2"}>
-				Get personalized exercise plans tailored to your needs. Beginner or experienced, we guide you towards a
-				healthier, fitter you. <span className={"mt-2 font-bold"}>Start your fitness journey today!</span>
+				Get AI customized exercise plans for every fitness level. <span className={"mt-2 font-bold"}>Start your journey to a healthier, fitter you today!</span>
 			</p>
 		</div>
 	)

@@ -6,11 +6,11 @@ export default function Footer() {
 			Created by {' '}
 			<Link
 				className={'text-primary-main'}
-				href={"https://www.mejaz.in"}
+				href={"#"}
 				target={'_blank'}
 				rel={'noopener noreferrer'}
 			>
-				Mohd Ejaz Siddiqui
+				Laxman
 			</Link>
 		</div>
 	)

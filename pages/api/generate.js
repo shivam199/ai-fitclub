@@ -1,4 +1,3 @@
-import {getCompletion} from "@/openAiServices";
 import {generateText} from "@/palm2Services"
 
 const generatePrompt = (userData) => {
@@ -35,19 +34,10 @@ export default async function handler(req, res) {
 				gender,
 				fitnessLevel,
 				goal,
-				model,
 			} = req.body
-
-			// generate the prompt
 			const prompt = generatePrompt({height, weight, age, gender, fitnessLevel, goal})
 
-			if (model.toLowerCase() === 'openai') {
-				result = await getCompletion(prompt)
-			} else {
-				// PaLM API
-				result = await generateText(prompt)
-			}
-
+			result = await generateText(prompt)
 			return res.json({result})
 		} else {
 			// Handle other HTTP methods or return an appropriate error response
