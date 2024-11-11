@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
-import WeeklyPlan from "@/components/WeeklyPlan";
+import WeeklyPlan from "@/components/Plan";
 import {BiSolidDownload} from "react-icons/bi"
 
-const TableToPDF = ({data}) => {
+const PDFConverter = ({data}) => {
 	const pdfContainerRef = useRef(null);
 	const handleDownload = async () => {
 		const html2pdf = await import('html2pdf.js');
@@ -47,4 +47,4 @@ const TableToPDF = ({data}) => {
 	);
 };
 
-export default TableToPDF;
+export default PDFConverter;

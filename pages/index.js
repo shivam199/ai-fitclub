@@ -1,10 +1,10 @@
 import {useState} from "react";
 import Head from "next/Head";
-import Header from "@/components/Header";
-import Intro from "@/components/Intro";
-import Footer from "@/components/Footer";
-import UserForm from "@/components/UserForm";
-import TableToPDF from "@/components/TableToPDF";
+import Header from "@/components/HeaderSection";
+import Heading from "@/components/Heading";
+import FooterSection from "@/components/FooterSection";
+import UserFormSection from "@/components/UserFormSection";
+import PDFConverter from "@/components/PDFConverter";
 
 
 export default function Home() {
@@ -20,21 +20,21 @@ export default function Home() {
 				<Header/>
 				<div className={'mt-24 px-4 my-6'}>
 					<div className={'max-w-5xl mx-auto'}>
-						<Intro/>
+						<Heading/>
 						<div className={'w-full'}>
-							<UserForm setData={setData} setLoading={setLoading} loading={loading}/>
+							<UserFormSection setData={setData} setLoading={setLoading} loading={loading}/>
 						</div>
 						{
 							loading
 								? <div className={'w-full text-center text-secondary-light p-2 text-xl font-normal'}>Working on it...</div>
 								: data.length > 0
-									? <TableToPDF data={data}/>
+									? <PDFConverter data={data}/>
 									: undefined
 						}
 					</div>
 				</div>
 			</div>
-			<Footer/>
+			<FooterSection/>
 		</main>
 	);
 }

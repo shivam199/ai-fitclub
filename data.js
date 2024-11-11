@@ -1,13 +1,3 @@
-export const AI_SOURCES = [
-	{
-		value: 'openai',
-		title: 'OpenAI GPT'
-	},
-	{
-		value: 'palm',
-		title: 'Google PaLM'
-	}
-]
 export const GENDERS = [
 	{
 		value: 'female',

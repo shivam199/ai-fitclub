@@ -1,4 +1,4 @@
-export default function Intro() {
+export default function Heading() {
 	return (
 		<div className={'text-md text-zinc-600 mt-3'}>
 			<p className={"font-semibold text-2xl"}>

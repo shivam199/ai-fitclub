@@ -1,4 +1,4 @@
-export default function CustomSelect({label, id, values}) {
+export default function Select({label, id, values}) {
 	return (
 		<>
 			<label
